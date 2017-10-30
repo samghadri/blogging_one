@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+{% block title %}Contact - {{ block.super }}{% endblock %}
+{% block content %}
+<div class="container">
+
+<h1>Contact Us</h1>
+<form class="post-form" role="form" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class='btn btn-primary' value="Send" />
+</form>
+
+</div>
+
+<script> var editor = new MediumEditor('.editable');</script>
+
+
+{% endblock %}
